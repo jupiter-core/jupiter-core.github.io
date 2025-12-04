@@ -57,9 +57,17 @@ function updateLanguage(lang) {
     });
 
     // Update language button text
+    updateLanguageButton(lang);
+}
+
+// Update language button text
+function updateLanguageButton(lang) {
     const langBtn = document.getElementById('langBtn');
     if (langBtn) {
-        langBtn.querySelector('.lang-text').textContent = lang === 'ko' ? 'EN' : '한';
+        const langText = langBtn.querySelector('.lang-text');
+        if (langText) {
+            langText.textContent = lang === 'ko' ? 'EN' : '한';
+        }
     }
 }
 
@@ -71,13 +79,20 @@ function toggleLanguage() {
 
 // Smooth scroll behavior
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language button text first
+    updateLanguageButton(currentLang);
+    
     // Initialize language
     updateLanguage(currentLang);
 
-    // Language toggle button
+    // Language toggle button - use event delegation for better reliability
     const langBtn = document.getElementById('langBtn');
     if (langBtn) {
-        langBtn.addEventListener('click', toggleLanguage);
+        langBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleLanguage();
+        });
     }
 
     // Add smooth scrolling to all anchor links

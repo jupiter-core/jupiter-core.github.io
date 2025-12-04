@@ -22,8 +22,8 @@ body {
 }
 
 .lang-btn {
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
     border-radius: 25px;
     padding: 10px 20px;
     cursor: pointer;
@@ -31,20 +31,30 @@ body {
     font-weight: 600;
     color: #667eea;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 40px;
 }
 
 .lang-btn:hover {
     background: white;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.lang-btn:active {
+    transform: translateY(0);
 }
 
 .lang-text {
     display: inline-block;
-    min-width: 30px;
     text-align: center;
+    user-select: none;
 }
 
 .container {
@@ -234,6 +244,8 @@ body {
     .lang-btn {
         padding: 8px 16px;
         font-size: 0.85rem;
+        height: 36px;
+        min-width: 45px;
     }
 
     .hero-title {
@@ -277,6 +289,8 @@ body {
     .lang-btn {
         padding: 6px 12px;
         font-size: 0.8rem;
+        height: 32px;
+        min-width: 40px;
     }
 
     .hero {
