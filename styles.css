@@ -10,6 +10,41 @@ body {
     color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    position: relative;
+}
+
+/* Language Toggle Button */
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #667eea;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lang-text {
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
 }
 
 .container {
@@ -191,6 +226,16 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .language-toggle {
+        top: 15px;
+        right: 15px;
+    }
+
+    .lang-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
     .hero-title {
         font-size: 3rem;
     }
@@ -224,6 +269,16 @@ body {
 }
 
 @media (max-width: 480px) {
+    .language-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
     .hero {
         padding: 60px 20px;
     }

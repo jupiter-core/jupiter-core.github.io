@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jupiter - 중요한 가치를 전달하는 앱 개발 회사</title>
+    <title data-i18n="title">Jupiter - 중요한 가치를 전달하는 앱 개발 회사</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle">
+        <button id="langBtn" class="lang-btn" aria-label="Language Toggle">
+            <span class="lang-text">EN</span>
+        </button>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1 class="hero-title">Jupiter</h1>
-            <p class="hero-subtitle">중요한 가치를 사용자들에게 전달하는 앱을 만듭니다</p>
-            <p class="hero-description">
+            <p class="hero-subtitle" data-i18n="hero-subtitle">중요한 가치를 사용자들에게 전달하는 앱을 만듭니다</p>
+            <p class="hero-description" data-i18n="hero-description">
                 Jupiter는 사용자들에게 의미 있는 경험과 가치를 제공하는 모바일 앱을 개발합니다.<br>
                 우리의 앱들은 단순한 기능을 넘어서 사용자의 일상에 긍정적인 영향을 미치도록 설계되었습니다.
             </p>
@@ -22,31 +29,31 @@
     <!-- Apps Section -->
     <section class="apps-section">
         <div class="container">
-            <h2 class="section-title">대표 앱</h2>
+            <h2 class="section-title" data-i18n="section-title">대표 앱</h2>
             <div class="apps-grid">
                 <div class="app-card">
                     <div class="app-icon">
-                        <img src="images/capybara.png" alt="카피바라 찾기">
+                        <img src="images/capybara.png" alt="카피바라 찾기" data-i18n-alt="app-capybara">
                     </div>
-                    <h3 class="app-name">카피바라 찾기</h3>
+                    <h3 class="app-name" data-i18n="app-capybara">카피바라 찾기</h3>
                 </div>
                 <div class="app-card">
                     <div class="app-icon">
-                        <img src="images/sudoku.png" alt="캐릭터 스도쿠">
+                        <img src="images/sudoku.png" alt="캐릭터 스도쿠" data-i18n-alt="app-sudoku">
                     </div>
-                    <h3 class="app-name">캐릭터 스도쿠</h3>
+                    <h3 class="app-name" data-i18n="app-sudoku">캐릭터 스도쿠</h3>
                 </div>
                 <div class="app-card">
                     <div class="app-icon">
-                        <img src="images/choicely.png" alt="초이슬리">
+                        <img src="images/choicely.png" alt="초이슬리" data-i18n-alt="app-choicely">
                     </div>
-                    <h3 class="app-name">초이슬리</h3>
+                    <h3 class="app-name" data-i18n="app-choicely">초이슬리</h3>
                 </div>
                 <div class="app-card">
                     <div class="app-icon">
-                        <img src="images/mytarotdiary.png" alt="나의 타로 일기">
+                        <img src="images/mytarotdiary.png" alt="나의 타로 일기" data-i18n-alt="app-tarot">
                     </div>
-                    <h3 class="app-name">나의 타로 일기</h3>
+                    <h3 class="app-name" data-i18n="app-tarot">나의 타로 일기</h3>
                 </div>
             </div>
         </div>
@@ -58,8 +65,8 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3 class="footer-title">Jupiter</h3>
-                    <p class="footer-text">2025년 설립</p>
-                    <p class="footer-text">서울 지점</p>
+                    <p class="footer-text" data-i18n="footer-established">2025년 설립</p>
+                    <p class="footer-text" data-i18n="footer-location">서울 지점</p>
                 </div>
                 <div class="footer-contact">
                     <p class="footer-email">
@@ -68,7 +75,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Jupiter. All rights reserved.</p>
+                <p>&copy; 2025 Jupiter. <span data-i18n="footer-rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
